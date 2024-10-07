@@ -1,3 +1,9 @@
 ERROR : Error: EBUSY: resource busy or locked, rmdir
 Solution : Delete the folder and git clone again
 Ressource : https://stackoverflow.com/questions/55212864/error-ebusy-resource-busy-or-locked-rmdir#:~:text=10.%20The%20main%20reason%20you%20are
+
+
+
+1) ng add angular-cli-ghpages
+2) ng build --base-href "https://GitGenius212.github.io/impact_famille_ang/"
+3)npx angular-cli-ghpages --dir=dist/
