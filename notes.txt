@@ -3,7 +3,7 @@ Solution :
 a) Option 1:
 Delete the folder and git clone again
 b) Option 2:
-supprimer le fichier dist et rebuild de zéro avec la commande npm run start
+supprimer le fichier dist et rebuild de zéro ng build et exécuter la commande npm run start
 
 Ressource : https://stackoverflow.com/questions/55212864/error-ebusy-resource-busy-or-locked-rmdir#:~:text=10.%20The%20main%20reason%20you%20are
 
@@ -11,4 +11,4 @@ Ressource : https://stackoverflow.com/questions/55212864/error-ebusy-resource-bu
 //Étapes pour mettre le projet sur git pages
 1) ng add angular-cli-ghpages
 2) ng build --base-href "https://GitGenius212.github.io/impact_famille_ang/"
-3)npx angular-cli-ghpages --dir=dist/
+3) npx angular-cli-ghpages --dir=dist\impact_famille_project_ang/browser
