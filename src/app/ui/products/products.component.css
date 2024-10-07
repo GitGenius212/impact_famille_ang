@@ -1,0 +1,9 @@
+@media only screen and  (min-width: 768px){
+    div.fixed-bottom-md {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+
+

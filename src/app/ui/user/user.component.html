@@ -1,0 +1,115 @@
+<div class="d-flex mt-2 ms-1 row g-3">
+  <!-- keyword: {{ appState.userState.keyword}} <br>
+  currentPage: {{ appState.userState.currentPage}}
+   pagesSize: {{ appState.userState.pagesSize}} -->
+  <div class="col-4 col-sm-6 col-md-4 col-lg-3">
+    <input class="form-control ms-1" type="search" placeholder="Search" aria-label="Search" 
+    [(ngModel)]="appState.userState.keyword">
+  </div>
+
+  <div class="col">
+    <button class="btn btn-outline-success" type="button" (click)="handleSearch()">Search</button>
+  </div>
+
+</div>
+
+<table class="table table-hover m-3">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prénom</th>
+        <th scope="col">Situation Familiale</th>
+        <th scope="col">Téléphone</th>
+        <th scope="col">Région</th>
+        <th scope="col" *ngIf="(appState.authState.roles.includes('DIRECTEUR') || appState.authState.roles.includes('BENEVOLE'))" >Edit</th>
+        <th scope="col" *ngIf="(appState.authState.roles.includes('DIRECTEUR') || appState.authState.roles.includes('BENEVOLE'))">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of appState.userState.users" 
+      [class.table-info]="user.types.includes('Directeur')"
+      [class.table-success]="user.types.includes('Client')"
+      [class.table-warning]="user.types.includes('Bénévole') && !user.types.includes('Directeur')"
+      >
+        <th scope="row">{{user.id}}</th>
+        <td>
+          {{user.nom}}
+          <span class="fst-italic d-block">{{user.types}} </span>
+        </td>
+        <td>
+          {{user.prenom}} 
+        </td>
+        <td>{{user.situation_familiale}}</td>
+        <td>{{user.telephone}}</td>
+        <td>{{user.region}}</td>
+        <td>
+          <button class="btn btn-outline-primary" *ngIf="(appState.authState.roles.includes('DIRECTEUR') || appState.authState.roles.includes('BENEVOLE'))" (click)="handleEditUser(user)">
+            <i class="bi bi-pen"></i>
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-outline-danger" *ngIf="(appState.authState.roles.includes('DIRECTEUR') || appState.authState.roles.includes('BENEVOLE'))" 
+          (click)="open(content, user)">
+            <i class="bi bi-trash"></i>
+          </button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>    
+
+  <app-modal></app-modal>
+
+        <nav aria-label="Page navigation"  [class.fixed-bottom]="appState.userState.users.length < appState.userState.pagesSize">
+          <ul class="pagination m-3">
+            <li class="page-item">
+              <button class="page-link" (click)="handleGoToPreviousPage()"
+              [disabled]="appState.userState.currentPage == 1"
+              >Previous</button>
+            </li>
+            <li class="page-item" *ngFor="let page of [].constructor(appState.userState.totalPages); let i = index">
+              <button class="page-link" (click)="handleGoToPage(i + 1)" [class.active]="appState.userState.currentPage ==(i + 1)">
+                {{i + 1}}
+              </button>
+            </li>
+            
+            <li class="page-item">
+              <button class="page-link" (click)="handleGoToNextPage()"
+              [disabled]="appState.userState.currentPage == appState.userState.totalPages"
+              >Next</button>
+            </li>
+          </ul>
+        </nav>
+          
+        
+
+
+
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title h4" id="modal-basic-title">Confirmation de suppression</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body ">
+    <div class="row g-0 ">
+      <div class="col-auto ">
+        <i class="bi bi-x-circle text-danger" style="font-size: 30px;"></i>
+      </div>
+      <div class="col ">
+        <p class="d-inline-flex mt-1 ms-2 fs-5">Êtes-vous sûr ?</p>
+      </div>
+    </div>
+		
+	</div>
+	<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Close click')">Close</button>
+		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Delete click')"class="btn btn-danger">Delete</button>
+	</div>
+</ng-template>
+
+
+
+
+
+ 

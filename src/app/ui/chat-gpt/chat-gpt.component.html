@@ -1,0 +1,55 @@
+<section style="background-color: #eee;">
+    <div class="container py-5">
+      <!-- {{message | json}} -->
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-8 col-lg-6 col-xl-4">
+  
+          <div class="card" id="chat1" style="border-radius: 15px;">
+            <div
+              class="card-header d-flex justify-content-between align-items-center p-3 bg-info text-white border-bottom-0"
+              style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+              <i class="fas fa-angle-left"></i>
+              <p class="mb-0 fw-bold">Live chat</p>
+              <i class="fas fa-times"></i>
+            </div>
+            
+            <div  class="card-body" style=" height: 400px;  max-height: 400px; overflow-y: auto;" #messageContainer>
+  
+              <div class="d-flex flex-row mb-4" *ngFor="let message of messages"
+              [class.justify-content-start]="message.role=='system'"
+              [class.justify-content-end]="message.role=='user'"
+              >
+                <img [src]="message.role=='user'?'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp':
+                'https://static.vecteezy.com/system/resources/previews/022/227/364/non_2x/openai-chatgpt-logo-icon-free-png.png'"
+                  alt="avatar 1" 
+                  style="width: 45px; height: 100%;">
+                <div class="p-3 ms-3" 
+                [style]="message.role=='user'?'background-color: rgba(57, 192, 237,.2);':'background-color: #fbfbfb;'"
+                style="border-radius: 15px;">
+                  <p class="small mb-0" [class.pre]="message.role!='user'">{{message.content}}</p>
+                </div>
+              </div>
+              
+  
+            </div>
+
+            <div data-mdb-input-init class="form-outline card-footer"  >
+              <textarea class="form-control" id="textAreaExample" rows="4" [(ngModel)]="message"></textarea>
+              <label class="form-label" for="textAreaExample">Type your message</label>
+              <button 
+              type="button" 
+              data-mdb-button-init data-mdb-ripple-init 
+              class="btn btn-info btn-rounded float-end mt-3"
+              (click)="handleAskGPT()"
+              >Send</button>
+            </div>
+            
+          </div>
+  
+        </div>
+        
+      </div>
+    
+    </div>
+    
+  </section>

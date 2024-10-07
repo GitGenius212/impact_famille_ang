@@ -1,0 +1,248 @@
+{
+  "products": [
+      {
+          "id": 1,
+          "photo": "https://listrick.com/wp-content/uploads/2019/03/Dean-Foods-Milk.jpg", 
+          "nom": "Lait",
+          "description": "", 
+          "type": "LAITIER",
+          "quantite": 500,
+          "boite_id": 1
+      },
+      {
+          "id": 2,
+          "photo": "https://th.bing.com/th/id/OIP.TbntRnZCWNQ-s-pGv1k_0AHaHa?rs=1&pid=ImgDetMain", 
+          "nom": "Fromage",
+          "type": "LAITIER",
+          "description": "", 
+          "quantite": 200,
+          "boite_id": 1
+      }, 
+      {
+          "id": 4,
+          "photo": "https://th.bing.com/th/id/OIP.cU358QTFk7HERkMUYtZhzQHaHa?rs=1&pid=ImgDetMain", 
+          "nom": "Yaourt",
+          "type": "LAITIER",
+          "description": "", 
+          "quantite": 150,
+          "boite_id": 1
+      }, 
+      {
+          "id": 3,
+          "photo": "https://th.bing.com/th/id/OIP.by299hcZ_UXfdbs6RlT43QHaHa?rs=1&pid=ImgDetMain", 
+          "nom": "Poulet",
+          "type": "PROTEINE",
+          "description": "", 
+          "quantite": 300,
+          "boite_id": 2
+      }, 
+      {
+          "id": 5,
+          "photo": "https://th.bing.com/th/id/R.07c9aa031c0dfde148c8ec93d2d5d45b?rik=PWhQkpioW2c9xQ&riu=http%3a%2f%2foutremers360.com%2fwp-media%2fuploads%2f2020%2f02%2fBANANE-FQC-3D.jpg&ehk=QF%2bD7%2b%2b184mMBe0p6LggImt4pKF0m66yjq7iwW%2f6Inw%3d&risl=&pid=ImgRaw&r=0", 
+          "nom": "Banane",
+          "type": "FRUIT",
+          "description": "", 
+          "quantite": 100,
+          "boite_id": 3
+      },
+      {
+          "id": 6,
+          "photo": "https://i.pinimg.com/originals/ae/0d/69/ae0d69973a5b9175956d5abd5f0269d7.jpg", 
+          "nom": "Pomme",
+          "type": "FRUIT",
+          "quantite": 120,
+          "description": "", 
+          "boite_id": 3
+      }, 
+      {
+          "id": 7,
+          "photo": "https://th.bing.com/th/id/R.21c37314f4219d020bdce13e95327e59?rik=1UGE%2fdoA8go3Kg&riu=http%3a%2f%2fwww.jardins-de-creances.fr%2fimages%2fpackaging%2fbarquette-carotte.png&ehk=BOBtHjBEig7h7QLtGDloe1u%2foGEPOU0ZSOnu4xk2Q7U%3d&risl=&pid=ImgRaw&r=0", 
+          "nom": "Carotte",
+          "type": "LEGUME",
+          "description": "", 
+          "quantite": 200,
+          "boite_id": 4
+      }, 
+      {
+          "id": 17,
+          "photo": "https://th.bing.com/th/id/OIP.T4qdbFOrCZQL6Sh-TVebAwHaE7?rs=1&pid=ImgDetMain", 
+          "nom": "Brocoli",
+          "type": "LEGUME",
+          "description": "", 
+          "quantite": 200,
+          "boite_id": 4
+      }, 
+
+      {
+          "id": 9,
+          "photo": "https://bleu-blanc-coeur.org/wp-content/uploads/2021/10/oeufs-bio-systeme-U.jpg", 
+          "nom": "Oeuf",
+          "type": "PROTEINE",
+          "description": "", 
+          "quantite": 180,
+          "boite_id": 2
+      }, 
+      {
+              "id": 10,
+              "photo": "https://i.pinimg.com/736x/79/36/6c/79366c3fc6d65957b41665f0ae8cebe4.jpg",
+              "nom": "Riz", 
+              "type": "GRAIN_ENTIER",
+              "description": "", 
+              "quantite": 250,
+              "boite_id": 5
+          }, 
+          {
+              "id": 8,
+              "photo": "https://th.bing.com/th/id/OIP.oK4ZgcOqn_v6UMtVpwvWQwHaHa?rs=1&pid=ImgDetMain", 
+              "nom": "Pain",
+              "type": "GRAIN_ENTIER",
+              "description": "", 
+              "quantite": 300,
+              "boite_id": 5
+          }, 
+
+
+          {
+              "id": 11,
+              "photo": "https://th.bing.com/th/id/R.bc0aa154c88ea27e9f01b43047c5c6f5?rik=be0X8mRJcDrsjw&pid=ImgRaw&r=0", 
+              "nom": "Salade",
+              "type": "LEGUME",
+              "description": "", 
+              "quantite": 150,
+              "boite_id": 6
+          },
+          {
+              "id": 12,
+              "photo": "https://th.bing.com/th/id/OIP.G9sggLHtvqLLXnfcrU2VSQAAAA?rs=1&pid=ImgDetMain", 
+              "nom": "Epinard",
+              "type": "LEGUME",
+              "description": "", 
+              "quantite": 180,
+              "boite_id": 6
+          }, 
+          {
+              "id": 23,
+              "photo": "https://th.bing.com/th/id/OIP.539FKo85WsIj14FT8CdNpgHaE8?rs=1&pid=ImgDetMain", 
+              "nom": "Chou-fleur",
+              "type": "LEGUME",
+              "description": "", 
+              "quantite": 200,
+              "boite_id": 6
+          }, 
+          {
+              "id": 13,
+              "photo": "https://thumbs.dreamstime.com/b/captain-findus-fish-fillets-crispy-breadcrumbs-captain-findus-fish-fillets-crispy-breadcrumbs-findus-frozen-food-brand-186768220.jpg", 
+              "nom": "Poisson",
+              "type": "PROTEINE",
+              "description": "", 
+              "quantite": 220,
+              "boite_id": 7
+          }, 
+          {
+              "id": 19,
+              "photo": "https://shop.cabf.eu/wp-content/uploads/2017/06/215015000000_001.jpg", 
+              "nom": "Poulet grillé",
+              "type": "PROTEINE",
+              "description": "", 
+              "quantite": 180,
+              "boite_id": 7
+          }, 
+          {
+              "id": 25,
+              "photo": "https://adopteunemarque.com/dist/img/products/charal-steak-hache-pur-boeuf-15mg-boite-10-steaks-1kg.jpg", 
+              "nom": "Steak",
+              "type": "PROTEINE",
+              "description": "", 
+              "quantite": 200,
+              "boite_id": 7
+          }, 
+          {
+              "id": 15,
+              "photo": "https://media.auchan.fr/A0220100505000011576PRIMARY_1200x1200/B2CD/", 
+              "nom": "Orange",
+              "type": "FRUIT",
+              "description": "", 
+              "quantite": 180,
+              "boite_id": 8
+          },
+          {
+              "id": 16,
+              "photo": "https://th.bing.com/th/id/OIP.73yRSpSvhtYDXkbNXGf8egHaFU?w=258&h=186&c=7&r=0&o=5&pid=1.7", 
+              "nom": "Poire",
+              "type": "FRUIT",
+              "description": "", 
+              "quantite": 150,
+              "boite_id": 8
+          }, 
+          {
+              "id": 18,
+              "photo": "https://carrefourmaroc.ma/wp-content/uploads/2020/08/Flocons-d-avoine-CRF-500g.jpg", 
+              "nom": "Avoine",
+              "type": "GRAIN_ENTIER",
+              "description": "", 
+              "quantite": 300,
+              "boite_id": 9
+          }, 
+          {
+              "id": 14,
+              "photo": "https://garrido.dz/wp-content/uploads/2019/12/pates.png", 
+              "nom": "Pâtes",
+              "type": "GRAIN_ENTIER",
+              "description": "", 
+              "quantite": 350,
+              "boite_id": 9
+          }, 
+          {
+              "id": 21,
+              "photo": "https://th.bing.com/th/id/OIP.V5ir9Z7w6Ig0M317gZYhHAHaEz?rs=1&pid=ImgDetMain", 
+              "nom": "Fraise",
+              "type": "FRUIT",
+              "description": "", 
+              "quantite": 150,
+              "boite_id": 11
+          },
+          {
+              "id": 22,
+              "photo": "https://th.bing.com/th/id/OIP.t7sQx7QQe6LtKXmyRxZE5wHaEf?rs=1&pid=ImgDetMain", 
+              "nom": "Kiwi",
+              "type": "FRUIT",
+              "description": "", 
+              "quantite": 170,
+              "boite_id": 11
+          }, 
+          {
+              "id": 24,
+              "photo": "https://th.bing.com/th/id/OIP.LvKocQupcExe2bDffj4RDwHaHa?rs=1&pid=ImgDetMain", 
+              "nom": "Blé",
+              "type": "GRAIN_ENTIER",
+              "description": "", 
+              "quantite": 250,
+              "boite_id": 12
+          }, 
+          {
+              "id": 20,
+              "photo": "https://th.bing.com/th/id/R.153f295396ae8ae9276137e022806866?rik=qu3mEnNihtEs9Q&pid=ImgRaw&r=0", 
+              "nom": "Pois chiches",
+              "type": "GRAIN_ENTIER",
+              "description": "", 
+              "quantite": 220,
+              "boite_id": 12
+          }, 
+          {
+              "id": 26,
+              "photo": "https://th.bing.com/th/id/OIP.c4KBLrsqi7_MxgMmNgjusAHaHa?rs=1&pid=ImgDetMain", 
+              "nom": "Quinoa",
+              "type": "GRAIN_ENTIER",
+              "description": "", 
+              "quantite": 180,
+              "boite_id": 12
+          }
+
+
+
+
+
+
+
+  ]
+}

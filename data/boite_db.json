@@ -1,0 +1,49 @@
+{
+    "boites": [
+        {
+        "id": 1,
+        "type": "LAITIER"
+        },
+        {
+        "id": 2,
+        "type": "PROTEINE"
+        },
+        {
+        "id": 3,
+        "type": "FRUIT"
+        },
+        {
+        "id": 4,
+        "type": "LEGUME"
+        },
+        {
+        "id": 5,
+        "type": "GRAIN_ENTIER"
+        },
+        {
+        "id": 6,
+        "type": "LEGUME"
+        },
+        {
+        "id": 7,
+        "type": "PROTEINE"
+        },
+        {
+        "id": 8,
+        "type": "FRUIT"
+        },
+        {
+        "id": 9,
+        "type": "GRAIN_ENTIER"
+        },
+        {
+            "id": 11,
+            "type": "FRUIT"
+        },
+        {
+            "id": 12,
+            "type": "GRAIN_ENTIER"
+        }
+    ]
+}
+  

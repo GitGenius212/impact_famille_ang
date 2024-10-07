@@ -1,0 +1,12 @@
+ng serve --port 4100  --open
+
+//for local typescript:
+
+npx json-server data/user_db.json -m ./node_modules/json-server-auth -r routes.json -p 8090 -H 0.0.0.0
+npx json-server -w data/produit_db.json -p 8088 -H 0.0.0.0
+npx json-server -w data/boite_db.json -p 8089 -H 0.0.0.0
+
+//for global typescript:
+json-server data/user_db.json -m ./node_modules/json-server-auth -r routes.json -p 8090 -H 0.0.0.0
+json-server -w data/produit_db.json -p 8088 -H 0.0.0.0
+json-server -w data/boite_db.json -p 8089 -H 0.0.0.0

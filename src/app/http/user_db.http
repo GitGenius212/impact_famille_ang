@@ -1,0 +1,117 @@
+# Ajouter un utilisateur dans json-server-auth dans data/user_db.json
+# POST http://localhost:8090/register
+# Content-Type: application/json
+
+#  {
+#       "nom": "TestAuth",
+#       "prenom": "auth",
+#       "email": "admin@impact.ca",
+#       "password": "admin",
+#       "situation_familiale": "CELIBATAIRE",
+#       "telephone": "(514)-674-8563",
+#       "region": "QC",
+#       "types": [
+#         "BENEVOLE"
+#       ],
+#       "description": "C'est un test pour json-server-auth",
+#       "payee": false,
+#       "chariot": [],
+#       "prix": 10
+
+#  }
+
+ # Se connecter à l'aide d'un utilisateur possédant émail et un password crypté
+# POST http://localhost:8090/login
+# Content-Type: application/json
+
+# {
+#   "email": "smith@impact.com",
+#   "password": "smith12"
+# }
+
+# Avoir l'utilissteur auth par le token de login : 200
+#  GET http://localhost:8090/users/21
+#  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNtaXRoQGltcGFjdC5jb20iLCJpYXQiOjE3MTQzMjQ4MjcsImV4cCI6MTcxNDMyODQyNywic3ViIjoiMSJ9.1_DBhy0RfpdCVOc8YjNPkkAztRnB4K1r-AvihdexgVU
+
+
+# Avoir l'utilissteur auth par le token de register : 200
+#  GET http://localhost:8090/users/27 
+#  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvbG9AbWFpbC5jb20iLCJpYXQiOjE3MTQwMDIzNDAsImV4cCI6MTcxNDAwNTk0MCwic3ViIjoiMjcifQ.NmQt36qt_x3FkpdgiXc3PoOl-jjARjwD0bGIhgjQT50
+
+
+# Avoir tous les utilisateur grâce à un token : 200
+#  GET http://localhost:8090/users
+#  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvbG9AbWFpbC5jb20iLCJpYXQiOjE3MTQwMDI0OTcsImV4cCI6MTcxNDAwNjA5Nywic3ViIjoiMjcifQ.pVdwicKlsmyBQ10YhrnwWfqp8KZCrA5GnaRMNJaaCWw
+
+
+# Avoir l'utilissteur auth par le token de register : 200
+#  GET   http://localhost:8090/users
+#  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNtaXRoQGltcGFjdC5jb20iLCJpYXQiOjE3MTQwNzMzMDIsImV4cCI6MTcxNDA3NjkwMiwic3ViIjoiMSJ9.cptTQyJjZoiCDaE3nvNqx7ZIe8fYYJMX47Ex1WtdEjg
+
+
+# PUT http://localhost:8090/users/21
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNtaXRoQGltcGFjdC5jb20iLCJpYXQiOjE3MTQzMjk0NjYsImV4cCI6MTcxNDMzMzA2Niwic3ViIjoiMSJ9.swRXtTxZibrek8E0xMff3L1yLhaV4jtOTzeaVY4xcQQ
+# Content-Type: application/json
+
+# {
+#   "email": "henry@impact.com",
+#   "password": "$2a$10$h7cCS9iALQWRGEId24AhqOelts9qIr8VoC3nrNqHgFcW0Qk4owPdC",
+#   "nom": "Wright",
+#   "prenom": "Henry",
+#   "situation_familiale": "CELIBATAIRE",
+#   "telephone": "(514)-369-1472",
+#   "region": "Tours",
+#   "types": [
+#     "CLIENT"
+#   ],
+#   "description": "Venu pour acheter son chariot.",
+#   "payee": true,
+#   "chariot": [],
+#   "prix": 0
+ 
+# }
+
+# Essayer d'ajouter un utilisateur sans register or sign up with email and password
+# POST http://localhost:8090/users
+# Content-Type: application/json
+
+# {
+#   "email": "test2@impact.com",
+#   "password": "test2",
+#   "nom": "TestAuth2",
+#   "prenom": "auth2",
+#   "situation_familiale": "EN_FAMILLE",
+#   "telephone": "(514)-674-8563",
+#   "region": "QC",
+#   "types": [
+#     "BENEVOLE"
+#   ],
+#   "description": "C'est un test pour json-server-auth",
+#   "payee": false,
+#   "chariot": [],
+#   "prix": 10
+# }
+
+# Essayer d'ajouter un utilisateur avec sign up with email and password
+# POST http://localhost:8090/signup
+# Content-Type: application/json
+
+# {
+#   "email": "test3@impact.com",
+#   "password": "test3",
+#   "nom": "TestAuth3",
+#   "prenom": "auth3",
+#   "situation_familiale": "EN_FAMILLE",
+#   "telephone": "(514)-674-8563",
+#   "region": "QC",
+#   "types": [
+#     "BENEVOLE"
+#   ],
+#   "description": "C'est un test pour json-server-auth",
+#   "payee": false,
+#   "chariot": [],
+#   "prix": 10
+# }
+
+
+

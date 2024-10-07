@@ -1,0 +1,42 @@
+
+<div ngbAccordion [closeOthers]="false" class="m-3">
+	@for (boite of appStateBoites.boitesState.boites; track boite) {
+		<div ngbAccordionItem [collapsed]="boite.id !== 1">
+			<h2 ngbAccordionHeader>
+				<button ngbAccordionButton>Boite #{{ boite.id }} : {{boite.type}}</button>
+			</h2>
+			<div ngbAccordionCollapse>
+				<div ngbAccordionBody>
+					<ng-template>
+						<div class="row g-0">
+              <div class="col  col-md-3 d-flex justify-content-center" *ngFor="let product of filtreProductsByBoxes(boite.id)">
+               
+                  <div class="card mb-3 me-1" style="width:400px">
+                    <img class="card-img-top" src="{{product.photo}}" alt="Card-Image" style="width:100%; height: 300px;">
+                    <div class="card-body">
+                      <h4 class="card-title">{{product.nom}}</h4>
+                     
+                      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                      <span class="card-text d-flex mb-2">
+                        <h5 class="d-inline-flex me-2">Quantité:</h5>
+                        {{product.quantite}}
+  
+                      </span><div class="d-flex justify-content-between">
+                        <button class="btn btn-primary" (click)="handleDetailProduct(product)">See Profile</button>
+                        <button *ngIf="(appStateBoites.authState.roles.includes('DIRECTEUR'))" class="btn btn-danger ml-auto">Delete</button>
+                      </div>
+                    
+                    </div>
+                  </div>  
+                </div>
+                
+               </div> 
+           
+            
+					</ng-template>
+				</div>
+
+			</div>
+		</div>
+	}
+</div>

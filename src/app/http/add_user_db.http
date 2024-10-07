@@ -1,0 +1,456 @@
+# Ajouter un utilisateur dans json-server-auth dans data/user_db.json
+POST http://localhost:8090/register
+Content-Type: application/json
+
+  # {
+    
+  #   "nom": "Smith",
+  #   "prenom": "John",
+  #   "email": "smith@impact.com",
+  #   "password": "smith12",
+  #   "situation_familiale": "MARIE",
+  #   "telephone": "(438)-123-4567",
+  #   "region": "Paris",
+  #   "types": [
+  #     "BENEVOLE"
+  #   ],
+  #   "description": "Répond aux besoins des clients en gérant les utilisateurs et les produits.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 10
+  # }
+
+  # {
+    
+  #   "nom": "Williams",
+  #   "prenom": "Michael",
+  #   "email": "williams@impact.com",
+  #   "password": "williams123",
+  #   "situation_familiale": "EN_FAMILLE",
+  #   "telephone": "(514)-456-7891",
+  #   "region": "Marseille",
+  #   "types": [
+  #     "DIRECTEUR",
+  #     "BENEVOLE"
+  #   ],
+  #   "description": "Gère les bénévoles et a apporté les boîtes contenant des produits.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # }
+
+  # {
+   
+  #   "nom": "Johnson",
+  #   "prenom": "Emily",
+  #   "email": "emily@impact.com",
+  #   "password": "emily123",
+  #   "situation_familiale": "MARIE",
+  #   "telephone": "(514)-741-8529",
+  #   "region": "Toulouse",
+  #   "types": [
+  #     "CLIENT"
+  #   ],
+  #   "description": "Venu pour acheter son chariot.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # }
+
+  # {
+    
+  #   "nom": "Brown",
+  #   "prenom": "William",
+  #   "email": "brown@impact.com",
+  #   "password": "brown123",
+  #   "situation_familiale": "CELIBATAIRE",
+  #   "telephone": "(438)-852-9637",
+  #   "region": "Bordeaux",
+  #   "types": [
+  #     "BENEVOLE"
+  #   ],
+  #   "description": "Répond aux besoins des clients en gérant les utilisateurs et les produits.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+   
+  #   "nom": "Jones",
+  #   "prenom": "Olivia",
+  #   "email": "olivia@impact.com",
+  #   "password": "olivia123",
+  #   "situation_familiale": "EN_FAMILLE",
+  #   "telephone": "(438)-369-2581",
+  #   "region": "Nice",
+  #   "types": [
+  #     "CLIENT"
+  #   ],
+  #   "description": "Venu pour acheter son chariot.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+    
+  #   "nom": "Garcia",
+  #   "prenom": "Daniel",
+  #   "email": "daniel@impact.com",
+  #   "password": "daniel123",
+  #   "situation_familiale": "MARIE",
+  #   "telephone": "(514)-159-3572",
+  #   "region": "Strasbourg",
+  #   "types": [
+  #     "BENEVOLE"
+  #   ],
+  #   "description": "Répond aux besoins des clients en gérant les utilisateurs et les produits.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+    
+  #   "nom": "Martinez",
+  #   "prenom": "Sophia",
+  #   "email": "sophia@impact.com",
+  #   "password": "sophia123",
+  #   "situation_familiale": "CELIBATAIRE",
+  #   "telephone": "(514)-357-1592",
+  #   "region": "Nantes",
+  #   "types": [
+  #     "CLIENT"
+  #   ],
+  #   "description": "Venu pour acheter son chariot.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+    
+  #   "nom": "Hernandez",
+  #   "prenom": "James",
+  #   "email": "james@impact.com",
+  #   "password": "james123",
+  #   "situation_familiale": "EN_FAMILLE",
+  #   "telephone": "(438)-753-9514",
+  #   "region": "Montpellier",
+  #   "types": [
+  #     "CLIENT"
+  #   ],
+  #   "description": "Venu pour acheter son chariot.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+    
+  #   "nom": "Thompson",
+  #   "prenom": "Liam",
+  #   "email": "liam@impact.com",
+  #   "password": "liam123",
+  #   "situation_familiale": "CELIBATAIRE",
+  #   "telephone": "(514)-369-8521",
+  #   "region": "Toulon",
+  #   "types": [
+  #     "CLIENT"
+  #   ],
+  #   "description": "Venu pour acheter son chariot.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+   
+  #   "nom": "Lee",
+  #   "prenom": "Charlotte",
+  #   "email": "charlotte@impact.com",
+  #   "password": "Charlotte123",
+  #   "situation_familiale": "EN_FAMILLE",
+  #   "telephone": "(514)-456-1237",
+  #   "region": "Lille",
+  #   "types": [
+  #     "CLIENT"
+  #   ],
+  #   "description": "Venu pour acheter son chariot.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+   
+  #   "nom": "Gonzalez",
+  #   "prenom": "Ethan",
+  #   "email": "ethan@impact.com",
+  #   "password": "ethan123",
+  #   "situation_familiale": "MARIE",
+  #   "telephone": "(438)-951-3574",
+  #   "region": "Le Havre",
+  #   "types": [
+  #     "BENEVOLE"
+  #   ],
+  #   "description": "Répond aux besoins des clients en gérant les utilisateurs et les produits.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+   
+  #   "nom": "Smith",
+  #   "prenom": "Ava",
+  #   "email": "aya@impact.com",
+  #   "password": "aya123",
+  #   "situation_familiale": "CELIBATAIRE",
+  #   "telephone": "(438)-123-4589",
+  #   "region": "Limoges",
+  #   "types": [
+  #     "CLIENT"
+  #   ],
+  #   "description": "Venu pour acheter son chariot.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+   
+  #   "nom": "Davis",
+  #   "prenom": "Mia",
+  #   "email": "mia@impact.com",
+  #   "password": "mia123",
+  #   "situation_familiale": "EN_FAMILLE",
+  #   "telephone": "(438)-987-6543",
+  #   "region": "Brest",
+  #   "types": [
+  #     "CLIENT"
+  #   ],
+  #   "description": "Venu pour acheter son chariot.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+    
+  #   "nom": "Rodriguez",
+  #   "prenom": "Noah",
+  #   "email": "noah@impact.com",
+  #   "password": "noah123",
+  #   "situation_familiale": "MARIE",
+  #   "telephone": "(514)-456-7823",
+  #   "region": "Reims",
+  #   "types": [
+  #     "BENEVOLE"
+  #   ],
+  #   "description": "Répond aux besoins des clients en gérant les utilisateurs et les produits.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # }
+
+  # {
+    
+  #   "nom": "Taylor",
+  #   "prenom": "Amelia",
+  #   "email": "amelia@impact.com",
+  #   "password": "amelia123",
+  #   "situation_familiale": "CELIBATAIRE",
+  #   "telephone": "(438)-159-3572",
+  #   "region": "Dijon",
+  #   "types": [
+  #     "CLIENT"
+  #   ],
+  #   "description": "Venu pour acheter son chariot.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+   
+  #   "nom": "Martinez",
+  #   "prenom": "Elijah",
+  #   "email": "elijah@impact.com",
+  #   "password": "elijah123",
+  #   "situation_familiale": "EN_FAMILLE",
+  #   "telephone": "(438)-852-9637",
+  #   "region": "Clermont-Ferrand",
+  #   "types": [
+  #     "CLIENT"
+  #   ],
+  #   "description": "Venu pour acheter son chariot.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+    
+  #   "nom": "Thomas",
+  #   "prenom": "Harper",
+  #   "email": "harper@impact.com",
+  #   "password": "harper123",
+  #   "situation_familiale": "MARIE",
+  #   "telephone": "(514)-369-2581",
+  #   "region": "Besançon",
+  #   "types": [
+  #     "BENEVOLE"
+  #   ],
+  #   "description": "Répond aux besoins des clients en gérant les utilisateurs et les produits.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+    
+  #   "nom": "White",
+  #   "prenom": "Olivia",
+  #   "email": "white@impact.com",
+  #   "password": "white123",
+  #   "situation_familiale": "CELIBATAIRE",
+  #   "telephone": "(514)-753-9518",
+  #   "region": "Nantes",
+  #   "types": [
+  #     "CLIENT"
+  #   ],
+  #   "description": "Venu pour acheter son chariot.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+   
+  #   "nom": "Brown",
+  #   "prenom": "Benjamin",
+  #   "email": "benjamin@impact.com",
+  #   "password": "benjamin123",
+  #   "situation_familiale": "EN_FAMILLE",
+  #   "telephone": "(438)-258-3647",
+  #   "region": "Rouen",
+  #   "types": [
+  #     "CLIENT"
+  #   ],
+  #   "description": "Venu pour acheter son chariot.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+    
+  #   "nom": "Clark",
+  #   "prenom": "Zoe",
+  #   "email": "zoe@impact.com",
+  #   "password": "zoe123",
+  #   "situation_familiale": "MARIE",
+  #   "telephone": "(438)-123-9876",
+  #   "region": "Metz",
+  #   "types": [
+  #     "BENEVOLE"
+  #   ],
+  #   "description": "Répond aux besoins des clients en gérant les utilisateurs et les produits.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+    
+  #   "nom": "Wright",
+  #   "prenom": "Henry",
+  #   "email": "henry@impact.com",
+  #   "password": "henry123",
+  #   "situation_familiale": "CELIBATAIRE",
+  #   "telephone": "(514)-369-1472",
+  #   "region": "Tours",
+  #   "types": [
+  #     "CLIENT"
+  #   ],
+  #   "description": "Venu pour acheter son chariot.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+   
+  #   "nom": "Lopez",
+  #   "prenom": "Lily",
+  #   "email": "lilly@impact.com",
+  #   "password": "lilly123",
+  #   "situation_familiale": "EN_FAMILLE",
+  #   "telephone": "(514)-951-7558",
+  #   "region": "Angers",
+  #   "types": [
+  #     "CLIENT"
+  #   ],
+  #   "description": "Venu pour acheter son chariot.",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 0
+  # } 
+
+  # {
+   
+  #   "nom": "Louragli",
+  #   "prenom": "Achraf",
+  #   "email": "achraf@impact.com",
+  #   "password": "achraf12",
+  #   "situation_familiale": "CELIBATAIRE",
+  #   "telephone": "(438)-925-3954",
+  #   "region": "QC",
+  #   "types": [
+  #     "CLIENT",
+  #     "BENEVOLE"
+  #   ],
+  #   "description": "",
+  #   "payee": true,
+  #   "chariot": [],
+  #   "prix": 10
+  # } 
+
+  # {
+  #   "nom": "Lamarti",
+  #   "prenom": "Insaf",
+  #   "email": "insaf@impact.com",
+  #   "password": "insaf123",
+  #   "situation_familiale": "EN_FAMILLE",
+  #   "telephone": "(514)-515-6701",
+  #   "region": "QC",
+  #   "types": [
+  #     "BENEVOLE"
+  #   ],
+  #   "description": "",
+  #   "payee": false,
+  #   "chariot": [],
+  #   "prix": 10
+   
+  # } 
+
+  # {
+  #      "nom": "TestAuth",
+  #      "prenom": "auth",
+  #      "email": "admin@impact.com",
+  #      "password": "admin",
+  #      "situation_familiale": "CELIBATAIRE",
+  #      "telephone": "(514)-674-8563",
+  #      "region": "QC",
+  #      "types": [
+  #        "BENEVOLE"
+  #      ],
+  #      "description": "C'est un test pour json-server-auth",
+  #      "payee": false,
+  #      "chariot": [],
+  #      "prix": 10
+
+  # }
+

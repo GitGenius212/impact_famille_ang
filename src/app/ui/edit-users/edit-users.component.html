@@ -1,0 +1,100 @@
+<form [formGroup]="userFormGroup" class="m-3" (ngSubmit)="updateUser()">
+     <!-- {{userFormGroup.value | json}}  -->
+      <div class="row mb-3">
+          <div class="col">
+            <input type="text" class="form-control" formControlName="nom" placeholder="Entrer le nom" name="nom">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" formControlName="prenom" placeholder="Enter le prénom" name="prenom">
+          </div>
+        </div>
+        
+        <div class="row mb-3">
+          <div class="col-auto align-items-center d-flex">
+              <label for="passwordInput" class="form-label">Mot de passe: </label>
+          </div>
+          <div class="col">
+            <input type="password" class="form-control" formControlName="password" id="passwordInput" placeholder="Entrer le mot de passe" name="regionInput">
+          </div>
+        </div>
+
+        <div class="row mb-3 g-0">
+          <div class="col-auto">
+              <label for="selectTypeUser" class="form-label me-2">Type : </label>
+          </div>
+  
+          <div class="col" formArrayName="types">
+              <div class="form-check d-inline-flex" *ngFor="let type of modalService.checklistTypeState; let i = index" >
+                  <input type="checkbox" class="form-check-input"  id="check{{i + 1}}" name="option{{i + 1}}" [checked]="type?.checked" 
+                  (change)="onCheckboxChange($event, i)" 
+                  value="{{type?.value}}" >
+                  <label class="form-check-label ms-1 me-2" for="check1">{{type?.label}}</label>
+                </div>
+                
+          </div>
+        </div>
+  
+        <div class="row mb-3">
+          <div class="col-auto align-items-center d-flex">
+              <label for="telInput" class="form-label">Téléphone: </label>
+          </div>
+          <div class="col">
+            <input type="tel" class="form-control" formControlName="telephone" id="telInput" placeholder="Entrer le télphone" name="telInput">
+          </div>
+        </div>
+  
+        <div class="row mb-3">
+          <div class="col-auto align-items-center d-flex">
+              <label for="regionInput" class="form-label">Région: </label>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" formControlName="region" id="regionInput" placeholder="Entrer la région" name="regionInput">
+          </div>
+        </div>
+  
+        <div class="row mb-3">
+          <div class="col-auto align-items-center d-flex">
+              <label for="selectSituationFamiliale" class="form-label">Situation familiale : </label>
+          </div>
+  
+          <div class="col">
+              <select class="form-select" formControlName="situation_familiale" aria-label="Default select example" id="selectSituationFamiliale">
+                  <option selected value="">Choisissez sa situation familiale</option>
+                  <option value="MARIE">Marié</option>
+                  <option value="CELIBATAIRE">Celibataire</option>
+                  <option value="EN_FAMILLE">En famille</option>
+                </select>
+          </div>
+        </div>
+  
+        <div class="row mb-3 g-0">
+          <div class="col-auto align-items-center d-flex">
+              <label class="form-label">Prix: </label>
+          </div>
+  
+          <div class="col  ms-3">
+              <input type="text" name="prix" formControlName="prix"  class="ps-2 form-control"/>
+          </div>
+          <div class="col ms-2">
+              <input type="button" class=" btn btn-light mb-2" value="+1" (click)="additionnerPrix();" />
+              <input type="button" value="-1" class="btn btn-light mb-2 ms-2" (click)="soustrairePrix();" />
+              
+          </div>
+          
+        </div>
+        
+  
+        
+  
+        
+      <div class="mb-3 form-check">
+        <input type="checkbox" formControlName="payee" class="form-check-input" id="payee">
+        <label class="form-check-label" for="payee">Payéé</label>
+      </div>
+
+      <h2>Produits</h2>
+
+      <button [disabled]="userFormGroup.invalid" type="submit" class="btn btn-primary" >Edit</button>
+      
+    </form>
+  

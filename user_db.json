@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$Lm6ri9o8wYmzE16PvfoP5O2.jdxidFMi8xe1p3j4mf/YnTAoZ.l6W",
+      "firstname": "Olivier",
+      "lastname": "Monge",
+      "age": 32,
+      "id": 1
+    },
+    {
+      "email": "sebastien@mail.com",
+      "password": "$2a$10$uNrjCox4tt9SdBGrbRuuOeCuS4tlcFWYK.we702MdomBtCc3esEZe",
+      "firstname": "Sebastien",
+      "lastname": "Ponge",
+      "age": 53,
+      "id": 2
+    }
+  ],
+  "messages": [
+    {
+      "text": "blabla",
+      "userId": 1,
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+
+
+<form class="m-3">
+    <div class="mb-3">
+        
+        <div class="row">
+            <label for="exampleInputEmail1" class="form-label">Nom du produit </label>
+            <div class="col col-8 col-md-4">
+                <input type="text" class="form-control" id="inputNom" 
+                placeholder="Entrez le nom du produit">
+            </div>
+        </div>
+        
+    </div>
+
+        <div class="row">
+            <div class="col col-8 col-md-4">
+                <select class="form-select mb-3" aria-label="Select types of a product">
+                    <option selected>Quel est le type du produit</option>
+                    <option value="1">LAITIER</option>
+                    <option value="2">PROTEINE</option>
+                    <option value="3">FRUIT</option>
+                    <option value="3">LEGUME</option>
+                    <option value="3">GRAIN_ENTIER</option>
+                </select>
+            </div>
+        </div>
+        
+        <label class="form-label">Quantité :</label><span id="rangeValue">10</span>
+        <div class="row">
+            <div class="col col-8 col-md-4">
+                <input type="range" name="quantite" class="form-range" min="0" max="500" step="1" value="10" />
+            </div>
+        </div>
+        
+
+        
+    <label class="form-label mt-2">Photo </label>
+    <div class="row">
+        <div class="col col-12 col-md-8">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="Enter le lien de l'image ">
+                <label for="floatingInput">lien de l'image</label>
+                <div id="emailHelp" class="form-text">https://lien_image</div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+        <div class="row">
+            <!-- <div class="col-12 col-md-8">
+                <select class="form-select mb-3 " aria-label="Select boite" id="my-select">
+                    <option selected>Choisir la boite</option>
+                    <option value="1"> Boite#1: LAITIER <span class="badge">5</span></option>
+                    <option value="2"> Boite#5: PROTEINE </option>
+                    <option value="3"> Boite#7: FRUIT </option>
+                    <option value="3"> Boite#10: LEGUME</option>
+                    <option value="3"> Boite#2: GRAIN_ENTIER</option>
+                </select>
+            </div> -->
+            <div class="col-12 col-md-8">
+            <div class="dropdown mb-3 border">
+                <button class="btn   text-start form-select" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Choisir la boîte
+                </button>
+                <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item d-flex justify-content-between"><span class="text">Choisir la boîte</span><span class="badge"></span></a></li>
+                  <li><a class="dropdown-item d-flex justify-content-between"><span class="text">LAITIER</span> <span  class="badge bg-primary" style="width: 30px;">5</span></a></li>
+                  <li><a class="dropdown-item d-flex justify-content-between"><span class="text">PROTEINE</span> <span  class="badge bg-primary" style="width: 30px;">2</span></a></li>
+                  <li><a class="dropdown-item d-flex justify-content-between"><span class="text">FRUIT</span> <span  class="badge bg-primary" style="width: 30px;">1</span></a></li>
+                  <li><a class="dropdown-item d-flex justify-content-between"><span class="text">LEGUME</span><span  class="badge bg-primary" style="width: 30px;">4</span></a></li>
+                  <li><a class="dropdown-item d-flex justify-content-between"><span class="text">GRAIN_ENTIER</span> <span  class="badge bg-primary">10</span></a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        
+
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <div class="form-floating mb-3 ">
+                        <textarea class="form-control" placeholder="Leave a description here" id="floatingTextareaDescription" style="height: 100px"></textarea>
+                        <label for="floatingTextareaDescription">Description</label>
+                    </div>
+                </div>
+            </div>
+        
+            
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+ 
+  
+  
+  
+
+  
+
+  
+
+ 
+  
+
+ 

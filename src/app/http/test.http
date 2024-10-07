@@ -1,0 +1,95 @@
+# Tester le fonctionnement du serveur et du json-server
+ #GET  http://localhost:3000/posts
+
+
+
+# Ajouter un utilisateur à l'aide de json-server-auth
+# POST http://localhost:8086/register
+# Content-Type: application/json
+
+# {
+#   "email": "olivier@mail.com",
+#   "password": "bestPassw0rd",
+#   "firstname": "Olivier",
+#   "lastname": "Monge",
+#   "age": 32
+# }
+
+
+# Ajouter un deuxième utilisateur à l'aide de json-server-auth
+# POST http://localhost:8086/register
+# Content-Type: application/json
+
+# {
+#   "email": "sebastien@mail.com",
+#   "password": "wowPassw0rd",
+#   "firstname": "Sebastien",
+#   "lastname": "Ponge",
+#   "age": 53
+# }
+
+
+# Se connecter à l'aide d'un utilisateur possédant émail et un password crypté
+# POST http://localhost:3000/login
+# Content-Type: application/json
+
+# {
+#   "email": "olivier@mail.com",
+#   "password": "bestPassw0rd"
+# }
+
+
+
+# Accéder aux posts avec un droit de lecture des utilisateurs publics
+# GET  http://localhost:3000/664/posts
+
+
+
+# L'ajout est non authorisé, l'utilisateur doit se connecter
+# POST  http://localhost:3000/664/posts
+# Content-Type: application/json
+
+# {
+#   "text": "blabla"
+# }
+
+
+# GET : Response OK
+# GET http://localhost:3000/users/1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9saXZpZXJAbWFpbC5jb20iLCJpYXQiOjE3MTM5NzkzMjksImV4cCI6MTcxMzk4MjkyOSwic3ViIjoiMSJ9.IJfMUMT2ofPd8EPwqpEdOs7LuPaQ6wuZYUn9KmMe5Vw
+
+
+# GET : Response FORBIDDEN avec le token de l'id #1
+# GET http://localhost:3000/users/2
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9saXZpZXJAbWFpbC5jb20iLCJpYXQiOjE3MTM5NzkzMjksImV4cCI6MTcxMzk4MjkyOSwic3ViIjoiMSJ9.IJfMUMT2ofPd8EPwqpEdOs7LuPaQ6wuZYUn9KmMe5Vw
+
+
+#Tester le fichier routes.js avec l'utilisateur#1
+#  GET http://localhost:8086/users/1
+#  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9saXZpZXJAbWFpbC5jb20iLCJpYXQiOjE3MTM5NzkzMjksImV4cCI6MTcxMzk4MjkyOSwic3ViIjoiMSJ9.IJfMUMT2ofPd8EPwqpEdOs7LuPaQ6wuZYUn9KmMe5Vw
+
+
+#Tester le fichier routes.js avec l'utilisateur#2
+#  GET http://localhost:8086/users/2
+#  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNlYmFzdGllbkBtYWlsLmNvbSIsImlhdCI6MTcxMzk3OTQxNiwiZXhwIjoxNzEzOTgzMDE2LCJzdWIiOiIyIn0.Nh3ju_WfxNcXO_ESAN4eka36azdzeUMDrRV-kcp5gvU
+
+#Tester le fichier routes.js avec messges
+#  GET http://localhost:8086/messages
+#  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNlYmFzdGllbkBtYWlsLmNvbSIsImlhdCI6MTcxMzk3OTQxNiwiZXhwIjoxNzEzOTgzMDE2LCJzdWIiOiIyIn0.Nh3ju_WfxNcXO_ESAN4eka36azdzeUMDrRV-kcp5gvU
+
+
+# L'ajout du message de l'utilisateur userid#1
+# POST  http://localhost:8086/messages
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9saXZpZXJAbWFpbC5jb20iLCJpYXQiOjE3MTM5NzkzMjksImV4cCI6MTcxMzk4MjkyOSwic3ViIjoiMSJ9.IJfMUMT2ofPd8EPwqpEdOs7LuPaQ6wuZYUn9KmMe5Vw
+
+# {
+#   "text": "blabla", 
+#   "userId": 1
+# }
+
+#Avoir le message de l'utilisateu 1
+# GET http://localhost:8086/messages/1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNlYmFzdGllbkBtYWlsLmNvbSIsImlhdCI6MTcxMzk3OTQxNiwiZXhwIjoxNzEzOTgzMDE2LCJzdWIiOiIyIn0.Nh3ju_WfxNcXO_ESAN4eka36azdzeUMDrRV-kcp5gvU
+
+
