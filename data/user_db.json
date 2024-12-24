@@ -206,21 +206,21 @@
       "id": 12
     },
     {
-      "email": "mia@impact.com",
-      "password": "$2a$10$m5b7P8JDQQO8.JmzFZ0i0.nqD0N/Ib7kRoHIVOdOhjVvp86NDI0QK",
+      "id": 13,
       "nom": "Davis",
       "prenom": "Mia",
       "situation_familiale": "EN_FAMILLE",
       "telephone": "(438)-987-6543",
       "region": "Brest",
+      "email": "mia@impact.com",
+      "password": "$2a$10$W5z/BoXqzJqvPYi4XBriheF9otBxpHqYvgKrkEgY7Jtfo5w07POQK",
       "types": [
         "CLIENT"
       ],
       "description": "Venu pour acheter son chariot.",
       "payee": true,
       "chariot": [],
-      "prix": 0,
-      "id": 13
+      "prix": 0
     },
     {
       "email": "amelia@impact.com",
@@ -240,21 +240,21 @@
       "id": 15
     },
     {
-      "email": "elijah@impact.com",
-      "password": "$2a$10$/5SrX57lSrpnMctUS/nqsuYsv5AiJWvErr4eU3GWVbmfYlmOnMvNu",
+      "id": 16,
       "nom": "Martinez",
       "prenom": "Elijah",
       "situation_familiale": "EN_FAMILLE",
       "telephone": "(438)-852-9637",
       "region": "Clermont-Ferrand",
+      "email": "elijah@impact.com",
+      "password": "$2a$10$plsz58zhFI.j3p/5lQlNBeDZANBLWllQYae0cOJDhyi2lGAENMzu6",
       "types": [
         "CLIENT"
       ],
       "description": "Venu pour acheter son chariot.",
       "payee": true,
       "chariot": [],
-      "prix": 0,
-      "id": 16
+      "prix": 0
     },
     {
       "email": "harper@impact.com",
