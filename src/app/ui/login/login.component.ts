@@ -36,10 +36,14 @@ export class LoginComponent implements OnInit{
     })
     .catch(err => {
       if(err == "Incorrect password") 
-        this.errorMessage = " Password or mail are incorrects";
-      else
+        this.errorMessage = "Le nom d'utilisateur ou le mot de passe est incorrect";
+      else if(err == "Email and password are required") {
+        this.errorMessage = "L'email et le mot de passe sont requis";
+      } else if(err == "Cannot find user") {
+        this.errorMessage = "Impossible de trouver l'utilisateur";
+      } else 
       this.errorMessage = err;
-      console.log("error after login: " + JSON.stringify(err));
+      console.log("erreur après la connexion: " + JSON.stringify(err));
     })
     
 
