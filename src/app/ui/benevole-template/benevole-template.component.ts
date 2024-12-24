@@ -13,9 +13,9 @@ export class BenevoleTemplateComponent implements OnInit{
   }
 
   actions: Array<any> = [
-    {title:"Products", route:"/benevole/products", icon:"box2"},
-    {title:"Boxes", route:"/benevole/boxes", icon:"box2"},
-    {title:"Users", route:"/benevole/users", icon:"box2"},
+    {title:"Produits", route:"/benevole/products", icon:"box2"},
+    {title:"Boîtes", route:"/benevole/boxes", icon:"box2"},
+    {title:"Utilisateurs", route:"/benevole/users", icon:"box2"},
     {title:"ChatGPT", route:"/benevole/chat-gpt", icon:"box2"},
     
   ];
