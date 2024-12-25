@@ -16,14 +16,14 @@
                     <div class="card-body">
                       <h4 class="card-title">{{product.nom}}</h4>
                      
-                      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                      <p class="card-text">Quelques exemples de texte Quelques exemples de texte.</p>
                       <span class="card-text d-flex mb-2">
                         <h5 class="d-inline-flex me-2">Quantité:</h5>
                         {{product.quantite}}
   
                       </span><div class="d-flex justify-content-between">
-                        <button class="btn btn-primary" (click)="handleDetailProduct(product)">See Profile</button>
-                        <button *ngIf="(appStateBoites.authState.roles.includes('DIRECTEUR'))" class="btn btn-danger ml-auto">Delete</button>
+                        <button class="btn btn-primary" (click)="handleDetailProduct(product)">Voir le profile</button>
+                        <button *ngIf="(appStateBoites.authState.roles.includes('DIRECTEUR'))" class="btn btn-danger ml-auto">Supprimer</button>
                       </div>
                     
                     </div>
