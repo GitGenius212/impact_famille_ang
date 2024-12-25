@@ -8,7 +8,7 @@
   
   <div class="col">
     <button class="btn btn-outline-success" 
-    (click)="handleSearch()" type="submit">Search</button>
+    (click)="handleSearch()" type="submit">Rechercher</button>
   </div>
 
 </form>
@@ -22,7 +22,7 @@
           <div class="card-body">
             <h4 class="card-title">{{product.nom}}</h4>
            
-            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <p class="card-text">Quelques exemples de texte Quelques exemples de texte.</p>
             <span class="card-text d-flex mb-2">
               <h5 class="d-inline-flex me-2">Quantité:</h5>
               {{product.quantite}}
@@ -34,8 +34,8 @@
             </span>
 
             <div class="d-flex justify-content-between">
-              <a class="btn btn-primary" (click)="handleDetailProduct(product)">See Profile</a>
-              <a *ngIf="(appState.authState.roles.includes('DIRECTEUR'))" class="btn btn-danger ml-auto" (click)="handleDeleteProduct(product)">Delete</a>
+              <a class="btn btn-primary" (click)="handleDetailProduct(product)">Voir le profil</a>
+              <a *ngIf="(appState.authState.roles.includes('DIRECTEUR'))" class="btn btn-danger ml-auto" (click)="handleDeleteProduct(product)">Supprimer</a>
             </div>
             
           
