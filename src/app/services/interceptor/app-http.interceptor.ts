@@ -9,7 +9,9 @@ export const appHttpInterceptor: HttpInterceptorFn = (req, next) => {
   //Déclaration de variables-----------------------------------------
   const appStateService = inject(AppStateService);
   const userToken = appStateService.authState.token; 
-  const token_gpt = "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";
+  //https://platform.openai.com/api-keys
+  const token_gpt = "blabla";
+
   let modifiedReq : any;
   //Traitements------------------------------------------------------
   if(req.url == "https://api.openai.com/v1/chat/completions") {
