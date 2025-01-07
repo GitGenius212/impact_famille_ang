@@ -1,29 +1,52 @@
 <!-- Button trigger modal -->
+<button 
+  type="button" 
+  class="btn btn-outline-success shadow-sm mt-2 ms-3" 
+  data-bs-toggle="modal" 
+  data-bs-target="#staticBackdrop">
+  Ajouter un participant : 
+  <i class="bi bi-person ms-1"></i>
+</button>
 
-  
-    <button type="button" 
-    class="btn btn-outline-success mt-2 ms-3 " 
-    data-bs-toggle="modal" 
-    data-bs-target="#staticBackdrop">
-      Ajouter un participant : 
-      <i class="bi bi-person"></i>
-      </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Ajouter un Participant</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <app-form></app-form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="button" (click)="saveUser()" data-bs-dismiss="modal" [disabled]="modalService.userForm.invalid" class="btn btn-primary">Ajouter</button>
-        </div>
+<!-- Modal -->
+<div 
+  class="modal fade" 
+  id="staticBackdrop" 
+  data-bs-backdrop="static" 
+  data-bs-keyboard="false" 
+  tabindex="-1" 
+  aria-labelledby="staticBackdropLabel" 
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content shadow-lg border-0">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="staticBackdropLabel">
+          <i class="bi bi-plus-circle me-2"></i>
+          Ajouter un Participant
+        </h5>
+        <button 
+          type="button" 
+          class="btn-close" 
+          data-bs-dismiss="modal" 
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <app-form></app-form>
+      </div>
+      <div class="modal-footer bg-light">
+        <button 
+          type="button" 
+          class="btn btn-secondary" 
+          data-bs-dismiss="modal">Fermer</button>
+        <button 
+          type="button" 
+          (click)="saveUser()" 
+          data-bs-dismiss="modal" 
+          [disabled]="modalService.userForm.invalid" 
+          class="btn btn-primary">
+          Ajouter
+        </button>
       </div>
     </div>
   </div>
+</div>
