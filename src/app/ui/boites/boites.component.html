@@ -1,42 +1,56 @@
-
 <div ngbAccordion [closeOthers]="false" class="m-3">
-	@for (boite of appStateBoites.boitesState.boites; track boite) {
-		<div ngbAccordionItem [collapsed]="boite.id !== 1">
-			<h2 ngbAccordionHeader>
-				<button ngbAccordionButton>Boite #{{ boite.id }} : {{boite.type}}</button>
-			</h2>
-			<div ngbAccordionCollapse>
-				<div ngbAccordionBody>
-					<ng-template>
-						<div class="row g-0">
-              <div class="col  col-md-3 d-flex justify-content-center" *ngFor="let product of filtreProductsByBoxes(boite.id)">
-               
-                  <div class="card mb-3 me-1" style="width:400px">
-                    <img class="card-img-top" src="{{product.photo}}" alt="Card-Image" style="width:100%; height: 300px;">
-                    <div class="card-body">
-                      <h4 class="card-title">{{product.nom}}</h4>
-                     
-                      <p class="card-text">Quelques exemples de texte Quelques exemples de texte.</p>
-                      <span class="card-text d-flex mb-2">
-                        <h5 class="d-inline-flex me-2">Quantité:</h5>
-                        {{product.quantite}}
-  
-                      </span><div class="d-flex justify-content-between">
-                        <button class="btn btn-primary" (click)="handleDetailProduct(product)">Voir le profile</button>
-                        <button *ngIf="(appStateBoites.authState.roles.includes('DIRECTEUR'))" class="btn btn-danger ml-auto">Supprimer</button>
-                      </div>
-                    
+  @for (boite of appStateBoites.boitesState.boites; track boite) {
+    <div ngbAccordionItem [collapsed]="boite.id !== 1" class="mb-3 shadow-sm">
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton class="accordion-header bg-primary text-white p-3 rounded">
+          Boite #{{ boite.id }} : {{ boite.type }}
+        </button>
+      </h2>
+      <div ngbAccordionCollapse>
+        <div ngbAccordionBody class="p-4 bg-light rounded">
+          <ng-template>
+            <div class="row g-3">
+              <div
+                class="col-12 col-md-6 col-lg-4 d-flex justify-content-center"
+                *ngFor="let product of filtreProductsByBoxes(boite.id)"
+              >
+                <div class="card shadow-lg mb-3" style="width: 100%; max-width: 350px;">
+                  <img
+                    class="card-img-top rounded-top"
+                    src="{{ product.photo }}"
+                    alt="Image produit"
+                    style="width: 100%; height: 200px; object-fit: cover;"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-primary">{{ product.nom }}</h5>
+                    <p class="card-text text-muted">
+                      Quelques exemples de texte. Quelques exemples de texte.
+                    </p>
+                    <div class="card-text d-flex align-items-center mb-3">
+                      <strong class="me-2">Quantité :</strong>
+                      {{ product.quantite }}
                     </div>
-                  </div>  
+                    <div class="d-flex justify-content-between">
+                      <button
+                        class="btn btn-outline-primary"
+                        (click)="handleDetailProduct(product)"
+                      >
+                        Voir le profil
+                      </button>
+                      <button
+                        *ngIf="appStateBoites.authState.roles.includes('DIRECTEUR')"
+                        class="btn btn-outline-danger"
+                      >
+                        Supprimer
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                
-               </div> 
-           
-            
-					</ng-template>
-				</div>
-
-			</div>
-		</div>
-	}
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  }
 </div>

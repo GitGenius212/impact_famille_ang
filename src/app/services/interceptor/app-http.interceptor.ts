@@ -10,7 +10,7 @@ export const appHttpInterceptor: HttpInterceptorFn = (req, next) => {
   const appStateService = inject(AppStateService);
   const userToken = appStateService.authState.token; 
   //https://platform.openai.com/api-keys
-  const token_gpt = "blabla";
+  const token_gpt = "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";
 
   let modifiedReq : any;
   //Traitements------------------------------------------------------
