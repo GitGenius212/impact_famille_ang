@@ -1,19 +1,29 @@
-<form class="m-3">
-
-    <div class="row">
-        <div class="col col-8 col-md-4">
-            <select class="form-select mb-3" aria-label="Select types of a product">
-                <option selected>Quel est le type du produit</option>
-                <option value="1">LAITIER</option>
-                <option value="2">PROTEINE</option>
-                <option value="3">FRUIT</option>
-                <option value="3">LEGUME</option>
-                <option value="3">GRAIN_ENTIER</option>
-            </select>
+<form class="m-4 p-4 border rounded shadow-sm bg-light">
+    <!-- Sélection du type de produit -->
+    <div class="mb-4">
+      <label for="productType" class="form-label fw-bold">Type du produit</label>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <select 
+            class="form-select" 
+            id="productType" 
+            aria-label="Sélectionnez le type du produit">
+            <option selected disabled>Quel est le type du produit</option>
+            <option value="1">Laitier</option>
+            <option value="2">Protéine</option>
+            <option value="3">Fruit</option>
+            <option value="4">Légume</option>
+            <option value="5">Grain entier</option>
+          </select>
         </div>
+      </div>
     </div>
-    
-    
-
-    <button type="submit" class="btn btn-primary">Envoyer</button>
+  
+    <!-- Bouton Envoyer -->
+    <div class="text-end">
+      <button type="submit" class="btn btn-primary">
+        <i class="bi bi-send-fill me-1"></i> Envoyer
+      </button>
+    </div>
   </form>
+  
