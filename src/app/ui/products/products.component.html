@@ -1,80 +1,83 @@
-<form class="d-flex mt-2 ms-1 row g-3">
-  <div class="col-4 col-sm-6 col-md-4 col-lg-3">
-    <input class="form-control ms-1" type="search" 
-    [(ngModel)]="appState.productState.keyword"
-    name="keywordSearchProduct"
-    placeholder="Search" aria-label="Search">
+<!-- Formulaire de recherche -->
+<form class="d-flex mt-2 ms-3 row g-3 align-items-center">
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <input 
+      class="form-control shadow-sm" 
+      type="search" 
+      [(ngModel)]="appState.productState.keyword"
+      name="keywordSearchProduct"
+      placeholder="Rechercher un produit..." 
+      aria-label="Search">
   </div>
-  
   <div class="col">
-    <button class="btn btn-outline-success" 
-    (click)="handleSearch()" type="submit">Rechercher</button>
+    <button 
+      class="btn btn-outline-success shadow-sm" 
+      (click)="handleSearch()" 
+      type="submit">
+      <i class="bi bi-search me-1"></i> Rechercher
+    </button>
   </div>
-
 </form>
 
-<div class="card bg-light m-3">
+<!-- Liste des produits -->
+<div class="card bg-light border-0 shadow-sm m-3">
   <div class="container-fluid mt-3">
-    <div class="row g-0" >
-      <div class="col col-md-3 d-flex justify-content-center" *ngFor="let product of appState.productState.products">
-        <div class="card mb-3 me-1" style="width:400px">
-          <img class="card-img-top" src="{{product.photo}}" alt="Card-Image" style="width:100%; height: 300px;">
+    <div class="row g-3">
+      <div 
+        class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center" 
+        *ngFor="let product of appState.productState.products">
+        
+        <div class="card mb-3 shadow-sm" style="width: 100%;">
+          <img 
+            class="card-img-top rounded-top" 
+            src="{{product.photo}}" 
+            alt="{{product.nom}}" 
+            style="width: 100%; height: 300px; object-fit: cover;">
+          
           <div class="card-body">
-            <h4 class="card-title">{{product.nom}}</h4>
-           
-            <p class="card-text">Quelques exemples de texte Quelques exemples de texte.</p>
-            <span class="card-text d-flex mb-2">
-              <h5 class="d-inline-flex me-2">Quantité:</h5>
-              {{product.quantite}}
-            </span>
-
-            <span class="card-text d-flex mb-2">
-              <h5 class="d-inline-flex">Boite #{{product.boite_id}}</h5>
-              
-            </span>
-
-            <div class="d-flex justify-content-between">
-              <a class="btn btn-primary" (click)="handleDetailProduct(product)">Voir le profil</a>
-              <a *ngIf="(appState.authState.roles.includes('DIRECTEUR'))" class="btn btn-danger ml-auto" (click)="handleDeleteProduct(product)">Supprimer</a>
+            <h5 class="card-title text-primary">{{product.nom}}</h5>
+            <p class="card-text text-muted">Quelques exemples de texte Quelques exemples de texte.</p>
+            
+            <div class="d-flex justify-content-between mb-2">
+              <span>
+                <strong>Quantité :</strong> {{product.quantite}}
+              </span>
+              <span>
+                <strong>Boite :</strong> #{{product.boite_id}}
+              </span>
             </div>
             
-          
+            <div class="d-flex justify-content-between">
+              <button 
+                class="btn btn-primary btn-sm" 
+                (click)="handleDetailProduct(product)">
+                <i class="bi bi-eye me-1"></i> Voir le profil
+              </button>
+              
+              <button 
+                *ngIf="(appState.authState.roles.includes('DIRECTEUR'))" 
+                class="btn btn-danger btn-sm" 
+                (click)="handleDeleteProduct(product)">
+                <i class="bi bi-trash me-1"></i> Supprimer
+              </button>
+            </div>
           </div>
         </div>
       </div>
-
-      
     </div>
-    
-    
   </div>
 </div>
 
-
-<div class="ms-3 mb-3">
+<!-- Pagination -->
+<div class="ms-3 mb-3 d-flex justify-content-center">
   <ngb-pagination 
-      [collectionSize]="appState.productState.totalProducts"
-      [(page)]="appState.productState.currentPage"
-      [maxSize]="5"
-      [rotate]="true"
-      [ellipses]="false"
-      [boundaryLinks]="true"
-      (pageChange)="handleGoToPage($event)"
-/>
+    class="shadow-sm"
+    [collectionSize]="appState.productState.totalProducts"
+    [(page)]="appState.productState.currentPage"
+    [maxSize]="5"
+    [rotate]="true"
+    [ellipses]="false"
+    [boundaryLinks]="true"
+    (pageChange)="handleGoToPage($event)">
+  </ngb-pagination>
 </div>
-
-
-
-  
-    
- 
-
-
-
-
-
-
-
-
-
-  
