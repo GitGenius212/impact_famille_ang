@@ -70,6 +70,10 @@ body {
   transform: scale(1.1);
 }
 
+.gps div:hover {
+  transform: scale(1.1);
+}
+
 /* FEATURETTES */
 .featurette-divider {
   margin: 4rem 0;
